@@ -29,8 +29,8 @@ def critic_trainer(critic_list, optimizer_list, iteration, steps, target_loader,
 
     for i in range(args.critters):
 
-        real, target_iter = get_data(target_iter, target_loader)  # real, fake are now minibatches of data
-        fake, source_iter = get_data(source_iter, source_loader)
+        real = get_data(target_iter)  # real, fake are now minibatches of data
+        fake = get_data(source_iter)
 
         for param in critic_list[iteration].parameters():
             param.grad = None  # zero gradients of current critic
@@ -42,7 +42,7 @@ def critic_trainer(critic_list, optimizer_list, iteration, steps, target_loader,
 
         # APPLY TRANSFORMATIONS - if iterations >=1, apply gradient descent maps from previous critics.
         for j in range(iteration):
-            fake = steptaker(fake, critic_list[j], steps[j], num_step=args.num_step)
+            fake = steptaker(fake, critic_list[j], steps[j])
 
         D_fake = critic_list[iteration](fake)
         D_fake = -D_fake.mean()
@@ -62,7 +62,7 @@ def critic_trainer(critic_list, optimizer_list, iteration, steps, target_loader,
         log.plot('no_gpen', D_cost_nopen.cpu().data.numpy())
 
         # Save logs every 1000 iters
-        if (i < 5) or (i % 100 == 99):
+        if (i < 5) or (i % 1000 == 999):
             log.flush(args.temp_dir)
 
         log.tick()  # increment index of log

@@ -34,9 +34,6 @@ def contour_plot(critic, iteration, args):
     plt.title('Critic Contour Plot')
     plt.colorbar()
     os.makedirs(os.path.join(args.temp_dir, 'contours'), exist_ok=True)
-    plt.savefig(os.path.join(args.temp_dir, 'contours',
-                             'critters{}_step{}_dim{}_lamb{}.pdf'.format(args.critters, iteration,
-                                                                                  args.dim, args.lamb
-                                                                                  )), dpi=300)
+    plt.savefig(os.path.join(args.temp_dir, 'contours', 'step{}.pdf'.format(iteration)), dpi=300)
 
     plt.close()

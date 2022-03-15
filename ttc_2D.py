@@ -107,6 +107,7 @@ source_loader = getattr(dataloader_2D, args.source)(args.source_params, args.bs)
 # save args in config file
 ###################
 
+os.makedirs(args.temp_dir, exist_ok=True)
 config_file_name = os.path.join(args.temp_dir, 'train_config.txt')
 with open(config_file_name, 'w') as f:
     json.dump(args.__dict__, f, indent=2)
@@ -151,7 +152,7 @@ for iteration in range(args.num_crit):
     # (2) Pick step size
     ###########################
 
-    steps[iteration] = args.theta * W1_dist.detach()
+    steps[iteration] = max(args.theta * W1_dist.detach(), 0.05*torch.ones([1]))
 
     ###########################
     # (3) freeze critic and save

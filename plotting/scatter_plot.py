@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(os.getcwd())
 sys.path.append(os.path.join(os.getcwd(), '../TTC_utils'))
-from get_data2D import get_data
+from get_data_2D import get_data
 from steptaker import steptaker
 import dataloader_2D as dataloader
 
@@ -28,7 +28,7 @@ def scatter_plot(critic_list, steps, c_idx, fake, args):
     target_loader = getattr(dataloader, args.target)(args.target_params, num_samp)
     target_gen = iter(target_loader)
 
-    real, _ = get_data(target_gen, target_loader)
+    real = get_data(target_gen)
 
     if c_idx == 0:  # if you're at the start of training, specify window
         fulldata = torch.cat((real, fake), dim=0)
@@ -44,7 +44,7 @@ def scatter_plot(critic_list, steps, c_idx, fake, args):
 
     # APPLY TRANSFORMATIONS - if iterations >=1, apply gradient descent maps from previous critics.
     for j in range(c_idx):
-        fake = steptaker(fake, critic_list[j], steps[j], num_step=args.num_step)
+        fake = steptaker(fake, critic_list[j], steps[j])
 
     fake = fake.data.cpu().numpy()
 
