@@ -1,0 +1,48 @@
+#files to be ignored by git
+#
+#ignore pycache
+__pycache__/
+
+get_data_2D.py
+mean_matcher.py
+*.xml
+scatter_2mode.py
+scatter_FDS.py
+shatter_plot.py
+TTC_w_toy.iml
+
+#ignore results
+results/
+
+#ignore files_for_transfer
+files_for_transfer/
+
+#ignore saved greyscale untrained generators
+greyscale_ugens/
+
+#ignore saved untrained generators
+untrained_generators/
+
+#ignore outfiles
+*.out
+
+#ignore anything starting with check or train and ending with .sh
+check-*.sh
+train-*.sh
+dataprepare*.sh
+
+#ignore experiment_history.pkl
+experiment_history*.pkl
+
+#ignore pairwisematrices
+pairwisematrices/
+
+EB_TTC_results/
+training_scripts/
+for_etienne/
+inactive_code/
+backups/
+training_scripts/
+utils/
+ENV/
+figs/
