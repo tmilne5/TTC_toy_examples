@@ -1,0 +1,20 @@
+{
+  "source": "circle",
+  "source_params": " 0.2_0.2_2_0_0",
+  "target": "rotated_circle",
+  "target_params": " 0.01_0.1_4_0_0.78",
+  "temp_dir": ".\\figs\\2gauss_to_4gauss\\",
+  "dim": 128,
+  "seed": 0,
+  "lamb": 100.0,
+  "clr": 0.001,
+  "theta": 1.0,
+  "critters": 1000,
+  "bs": 64,
+  "plus": true,
+  "num_crit": 60,
+  "beta_1": 0.0,
+  "beta_2": 0.999,
+  "relu": true,
+  "nice_contours": true
+}
