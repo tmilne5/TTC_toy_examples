@@ -1,0 +1,20 @@
+{
+  "source": "sin",
+  "source_params": " 0_1_2_0_2",
+  "target": "sin",
+  "target_params": " 1.57_0.5_1_0_4",
+  "temp_dir": ".\\figs\\sin_to_cos",
+  "dim": 128,
+  "seed": 0,
+  "lamb": 100.0,
+  "clr": 0.001,
+  "theta": 1.0,
+  "critters": 1000,
+  "bs": 64,
+  "plus": true,
+  "num_crit": 60,
+  "beta_1": 0.0,
+  "beta_2": 0.999,
+  "relu": true,
+  "nice_contours": true
+}

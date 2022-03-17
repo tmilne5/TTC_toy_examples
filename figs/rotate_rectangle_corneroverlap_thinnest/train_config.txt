@@ -1,0 +1,20 @@
+{
+  "source": "uniform",
+  "source_params": " 0_2_0_0.1",
+  "target": "uniform",
+  "target_params": " 0_0.1_0_2",
+  "temp_dir": ".\\figs\\rotate_rectangle_corneroverlap_thinnest",
+  "dim": 128,
+  "seed": 0,
+  "lamb": 100.0,
+  "clr": 0.001,
+  "theta": 1.0,
+  "critters": 1000,
+  "bs": 64,
+  "plus": true,
+  "num_crit": 60,
+  "beta_1": 0.0,
+  "beta_2": 0.999,
+  "relu": true,
+  "nice_contours": true
+}

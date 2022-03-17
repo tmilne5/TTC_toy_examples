@@ -3,7 +3,6 @@
 #ignore pycache
 __pycache__/
 
-get_data_2D.py
 mean_matcher.py
 *.xml
 scatter_2mode.py
@@ -45,4 +44,6 @@ backups/
 training_scripts/
 utils/
 ENV/
-figs/
+contours/
+*.jpg
+*.pkl

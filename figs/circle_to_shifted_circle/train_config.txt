@@ -1,0 +1,20 @@
+{
+  "source": "circle",
+  "source_params": " 0.1_0.1_3_0_0",
+  "target": "rotated_circle",
+  "target_params": " 0.01_0.2_3_2_1",
+  "temp_dir": ".\\figs\\circle_to_shifted_circle",
+  "dim": 128,
+  "seed": 0,
+  "lamb": 100.0,
+  "clr": 0.001,
+  "theta": 1.0,
+  "critters": 1000,
+  "bs": 64,
+  "plus": true,
+  "num_crit": 60,
+  "beta_1": 0.0,
+  "beta_2": 0.999,
+  "relu": true,
+  "nice_contours": true
+}

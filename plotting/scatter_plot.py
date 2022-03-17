@@ -52,7 +52,7 @@ def scatter_plot(critic_list, steps, c_idx, fake, args):
     plt.scatter(fake[:, 0], fake[:, 1], alpha=0.1, label='fake')
     plt.xlim(args.xwin[0], args.xwin[1])
     plt.ylim(args.ywin[0], args.ywin[1])
-    plt.legend()
+    plt.legend(loc='upper right')
     os.makedirs(os.path.join(args.temp_dir, 'scatter'), exist_ok=True)
     plt.savefig(
         os.path.join(args.temp_dir, 'scatter',
