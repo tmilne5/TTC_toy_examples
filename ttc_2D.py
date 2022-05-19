@@ -48,14 +48,14 @@ parser.add_argument('--source', type=str, required=True, default='circle',
                     choices=['circle', 'rotated_circle', 'line', 'gaussian', 'uniform', 'sin', 'spiral',
                              'hollowrectangle'],
                     help='Which source distribution?')
-parser.add_argument('--source_params', type=str, default='0.1_2_0',
-                    help='A string specifying the source dist. See dataloader_2D.py for definition')
+parser.add_argument('--source_params', nargs='+', help='A list specifying the source dist. Enter 0 to get syntax',
+                    required=True, type=float)
 parser.add_argument('--target', type=str, required=True, default='circle',
                     choices=['circle', 'rotated_circle', 'line', 'gaussian', 'uniform', 'sin', 'spiral',
                              'hollowrectangle'],
                     help='Which target distribution?')
-parser.add_argument('--target_params', type=str, default='0.1_2_1',
-                    help='A string specifying the target dist. See dataloader_2D.py for definition')
+parser.add_argument('--target_params', nargs='+', help='A list specifying the target dist. Enter 0 to get syntax',
+                    required=True, type=float)
 parser.add_argument('--temp_dir', type=str, required=True, help='temporary directory for saving')
 parser.add_argument('--dim', type=int, default=64, help='int determining network dimensions')
 parser.add_argument('--seed', type=int, default=-1, help='Set random seed for reproducibility')
