@@ -46,13 +46,13 @@ from scatter_plot import scatter_plot
 parser = argparse.ArgumentParser('Training code for 2D TTC examples')
 parser.add_argument('--source', type=str, required=True, default='circle',
                     choices=['circle', 'rotated_circle', 'line', 'gaussian', 'uniform', 'sin', 'spiral',
-                             'hollowrectangle'],
+                             'hollow_rectangle'],
                     help='Which source distribution?')
 parser.add_argument('--source_params', nargs='+', help='A list specifying the source dist. Enter 0 to get syntax',
                     required=True, type=float)
 parser.add_argument('--target', type=str, required=True, default='circle',
                     choices=['circle', 'rotated_circle', 'line', 'gaussian', 'uniform', 'sin', 'spiral',
-                             'hollowrectangle'],
+                             'hollow_rectangle'],
                     help='Which target distribution?')
 parser.add_argument('--target_params', nargs='+', help='A list specifying the target dist. Enter 0 to get syntax',
                     required=True, type=float)

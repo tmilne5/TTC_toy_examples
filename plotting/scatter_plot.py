@@ -57,4 +57,7 @@ def scatter_plot(critic_list, steps, c_idx, fake, args):
     plt.savefig(
         os.path.join(args.temp_dir, 'scatter',
                      'step{}.jpg'.format(c_idx)))
+    plt.savefig(
+        os.path.join(args.temp_dir, 'scatter',
+                     'step{}.pdf'.format(c_idx)))
     plt.close()
