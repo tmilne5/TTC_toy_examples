@@ -1,12 +1,22 @@
 {
   "source": "uniform",
-  "source_params": " -2_2_-2_2",
-  "target": "hollowrectangle",
-  "target_params": " -1_1_-1_1",
-  "temp_dir": ".\\figs\\uniform_to_hollow",
+  "source_params": [
+    -2.0,
+    2.0,
+    -2.0,
+    2.0
+  ],
+  "target": "hollow_rectangle",
+  "target_params": [
+    -1.0,
+    1.0,
+    -1.0,
+    1.0
+  ],
+  "temp_dir": ".\\figs\\uniform_to_hollow\\",
   "dim": 128,
   "seed": 0,
-  "lamb": 100.0,
+  "lamb": 1000.0,
   "clr": 0.001,
   "theta": 1.0,
   "critters": 1000,

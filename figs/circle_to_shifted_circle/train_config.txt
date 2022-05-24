@@ -1,12 +1,24 @@
 {
   "source": "circle",
-  "source_params": " 0.1_0.1_3_0_0",
+  "source_params": [
+    0.1,
+    0.1,
+    3.0,
+    0.0,
+    0.0
+  ],
   "target": "rotated_circle",
-  "target_params": " 0.01_0.2_3_2_1",
-  "temp_dir": ".\\figs\\circle_to_shifted_circle",
+  "target_params": [
+    0.01,
+    0.2,
+    3.0,
+    2.0,
+    1.0
+  ],
+  "temp_dir": ".\\figs\\circle_to_shifted_circle\\",
   "dim": 128,
   "seed": 0,
-  "lamb": 100.0,
+  "lamb": 1000.0,
   "clr": 0.001,
   "theta": 1.0,
   "critters": 1000,
